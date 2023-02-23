@@ -43,6 +43,38 @@ body {
   font-family: "Hanken Grotesk", sans-serif;
 }
 
+@media screen and (min-width: 900px) {
+  .card {
+    width: 700px;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    margin: 100px auto;
+  }
+
+  .card-header {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-header--paragraphy {
+    color: var(--Light-lavender);
+    font-size: 1em;
+    text-align: center;
+    padding: 0 45px;
+    margin-bottom: 25px;
+  }
+
+  .card-summary {
+    border-radius: 0 20px 20px 0;
+    padding: 15px 20px 0 20px;
+    box-shadow: 5px 2px 10px 3px var(--Pale-blue);
+    
+  }
+}
+
 @media screen and (max-width: 375px) {
   .card {
     width: 375px;
@@ -57,22 +89,74 @@ body {
     flex-direction: column;
     align-items: center;
   }
+
+  .card-header--paragraphy {
+    color: var(--Light-lavender);
+    font-size: 1em;
+    text-align: center;
+    padding: 0 40px;
+    margin-bottom: 25px;
+  }
+
+  .attribution {
+    display: none;
+  }
+
+  .card-summary {
+    padding: 15px 0 0 30px;
+  }
 }
 
 .card-header {
-
-  background: linear-gradient(
-    90deg,
-    var(--Light-royal-blue) 10%,
-    var(--Light-slate-blue) 30%
-  );
+  background-image: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%));
 }
+
+/* CARD */
+.card-header--title {
+  color: var(--Light-lavender);
+  font-size: 1em;
+  margin: 20px 0;
+}
+
+.card-header--score {
+  padding: 25px 45px;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  background-image: linear-gradient(
+    to bottom,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+
+
+}
+
+.card-header--score-point {
+  color: var(--White);
+  font-size: 2.5em;
+  font-weight: 800;
+}
+
+.card-header--socore-second {
+  color: var(--Light-lavender);
+}
+
+.card-header--classification {
+  color: var(--White);
+  margin-bottom: 10px;
+}
+
 
 /* CARD TIPS */
 
 .card-sumary--title {
   font-size: 1em;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   font-weight: 700;
   color: var(--Dark-gray-blue);
 }
@@ -88,10 +172,6 @@ body {
   justify-content: space-between;
 }
 
-.card-summary {
-  padding: 30px 0 0 30px;
-}
-
 .card--reaction {
   color: var(--Light-red);
   background-color: hsl(0, 100%, 67%, 0.1);
@@ -99,17 +179,17 @@ body {
 
 .card--memory {
   color: var(--Orangey-yellow);
-  background-color: hsl(39, 100%, 56%,0.1);
+  background-color: hsl(39, 100%, 56%, 0.1);
 }
 
 .card--verbal {
   color: var(--Green-teal);
-  background-color: hsl(166, 100%, 37%,0.1);
+  background-color: hsl(166, 100%, 37%, 0.1);
 }
 
 .card--visual {
   color: var(--Violet-blue);
-  background-color: hsl(234, 85%, 45%,0.1);
+  background-color: hsl(234, 85%, 45%, 0.1);
 }
 
 .card-summary--score {
@@ -127,12 +207,34 @@ body {
   margin-right: 10px;
 }
 
+.card-summary--box {
+  margin-bottom: 20px;
+}
+/* BUTTON */
+
 .btn {
   color: var(--White);
-  font-size: 1em;
+  font-size: 1.1em;
   width: 320px;
   padding: 10px 30px;
-  border-radius: 20px;
+  border-radius: 30px;
   border: 0;
   background-color: var(--Dark-gray-blue);
+}
+
+
+.btn:hover {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
