@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Font-Family */
+  --hanken-grotesk:  'Hanken Grotesk', sans-serif;
+
+  /* ### Primary */
+
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+
+  /* ## Gradients */
+
+  --Light-slate-blue: hsl(252, 100%, 67%); /* (background) */
+  --Light-royal-blue: hsl(241, 81%, 54%); /* (background) */
+
+  --Violet-blue: hsla(256, 72%, 46%, 1); /* (circle) */
+  --Persian-blue: hsla(241, 72%, 46%, 0); /* (circle) */
+
+  /* ### Neutral */
+
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+
+  /* ### Notes
+
+Use transparency to get the colour variations necessary to match the design. Hint: look into using `hsla()`.
+
+*/
+}
+
+body {
+  font-size: 18px;
+  font-family: var(--hanken-grotesk);
+
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Configurações globais */
+.card-score h1,
+.card-score p {
+  color: var(--Pale-blue);
+}
+
+.card-score h3 {
+  color: var(--White);
+}
+
+.card-result p {
+  color: var(--White);
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.card-result span {
+  color: var(--Pale-blue);
+}
+
+@media screen and (max-width: 375px) {
+  .card {
+    border: 1px solid #000;
+  }
+
+  .card-score {
+    background-color: var(--Light-slate-blue);
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
