@@ -19,6 +19,11 @@
   --Green-teal: hsl(166, 100%, 37%);
   --Cobalt-blue: hsl(234, 85%, 45%);
 
+  --light-red-back: hsla(0,100%,67%,0.2);
+  --orangey-back: hsla(39,100%,56%,0.2);
+  --green-back: hsla(166,100%,37%,0.2);
+  --cobalt-back: hsla(234,85%,45%,0.2);
+
   /* ## Gradients */
 
   --Light-slate-blue: hsl(252, 100%, 67%); /* (background) */
@@ -51,36 +56,134 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  background-color: var(--Dark-gray-blue)
 }
 
 /* Configurações globais */
-.card-score h1,
-.card-score p {
-  color: var(--Pale-blue);
+
+.card {
+  background-color: var(--White);
 }
 
-.card-score h3 {
-  color: var(--White);
+.card-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
 }
 
+.card-result h1 {
+  font-size: 1rem;
+  margin: 20px 0;
+}
+
+.card-result h1,
 .card-result p {
+  color: var(--Light-lavender);
+}
+
+.card-result h3 {
+  color: var(--White);
+  margin: 20px 0 10px 0;
+}
+
+.card-result--description {
+  width: 284px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-score {
+  text-align: center;
+  padding: 25px;
+  border-radius: 50%;
+  background-color: var(--Green-teal);
+}
+
+.card-score p {
   color: var(--White);
   font-size: 2.5rem;
+  font-weight: 800;
+
+}
+
+.card-score p:last-child {
+  color: var(--Light-lavender);
+  font-size: 1rem;
+}
+
+.card-summary {
+  color: var(--Dark-gray-blue);
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.card-summary h2 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.card-summary ul {
+  list-style: none;
+}
+
+.card-summary img {
+  margin-right: 10px;
+}
+
+.card-summary li {
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.card-summary span {
+  float: right;
+  color: var(--Dark-gray-blue);
   font-weight: 900;
 }
 
-.card-result span {
-  color: var(--Pale-blue);
+.card-summary--reaction {
+  color: var(--Light-red);
+  background-color: var(--light-red-back);
+}
+
+.card-summary--memory {
+  color: var(--Orangey-yellow);
+  background-color: var(--orangey-back);
+}
+
+.card-summary--verbal {
+  color: var(--Green-teal);
+  background-color: var(--green-back);
+}
+
+.card-summary--visual {
+  color: var(--Cobalt-blue);
+  background-color: var(--cobalt-back);
+}
+
+.btn {
+  color: var(--White);
+  background-color: var(--Dark-gray-blue);
+
+  width: 300px;
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
 }
 
 @media screen and (max-width: 375px) {
   .card {
-    border: 1px solid #000;
+    width: 360px;
   }
 
-  .card-score {
-    background-color: var(--Light-slate-blue);
+  .card-result {
+    border-radius: 0 0 30px 30px;
   }
+  
 }
 
 .attribution {
